@@ -1,0 +1,167 @@
+.home-container {
+  min-height: calc(100vh - 70px);
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.home-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side - Image */
+.home-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.home-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.home-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Side - Content */
+.home-text {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-text h1 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.home-text .subtitle {
+  font-size: 1.1rem;
+  color: #2563eb;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.home-text p {
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 180px;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn-secondary:hover {
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+/* Welcome message */
+.welcome-message {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.welcome-message h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin: 0 0 5px;
+}
+
+.welcome-message .role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .home-content {
+    flex-direction: column;
+  }
+  
+  .home-image {
+    height: 300px;
+  }
+  
+  .home-text {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 20px;
+  }
+  
+  .home-text {
+    padding: 30px;
+  }
+  
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
