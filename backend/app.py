@@ -13,7 +13,7 @@ frontend_folder = os.path.join(os.getcwd(), "../frontend/dist")
 
 app = Flask(__name__, static_folder=frontend_folder, static_url_path="/")
 
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 app.config.from_object('config.Config')
 app.config['JWT_SECRET_KEY'] = 'super-secret-key-change-this'
