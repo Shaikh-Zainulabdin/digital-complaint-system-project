@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AllComplaints.css";
-
+import API_BASE_URL from "../config";
 const AllComplaints = () => {
   const [complaints, setComplaints] = useState([]);
   const [selectedComplaint, setSelectedComplaint] = useState(null);
@@ -13,7 +13,7 @@ const AllComplaints = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:5000/api/complaints/all",
+        `${API_BASE_URL}/complaints/all`,
         {
           method: "GET",
           headers: {
@@ -51,7 +51,7 @@ const AllComplaints = () => {
       const token = localStorage.getItem("token");
 
       await fetch(
-        `http://localhost:5000/api/complaints/${id}/status`,
+        `${API_BASE_URL}/complaints/${id}/status`,
         {
           method: "PATCH",
           headers: {
@@ -76,7 +76,7 @@ const AllComplaints = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/api/complaints/${id}`,
+       `${API_BASE_URL}/complaints/${id}`,
         {
           method: "DELETE",
           headers: {
