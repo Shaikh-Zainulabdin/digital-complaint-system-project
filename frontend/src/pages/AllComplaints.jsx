@@ -27,7 +27,7 @@ const AllComplaints = () => {
 
       if (res.ok) {
         const sorted = data.complaints.sort(
-          (a, b) => new Date(a.created_at) - new Date(b.created_at)
+          (a, b) => new Date(b.created_at) - new Date(a.created_at)
         );
 
         setComplaints(sorted);
